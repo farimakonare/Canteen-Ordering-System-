@@ -1,0 +1,81 @@
+.orders-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orders-container h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .orders-container select {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .orders-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .orders-container li {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fdfdfd;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .orders-container li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orders-container li h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .orders-container li p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .orders-container button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .orders-container button:hover {
+    opacity: 0.9;
+  }
+  
+  .orders-container button:nth-child(1) {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .orders-container button:nth-child(1):hover {
+    background-color: #45a049;
+  }
+  
+  .orders-container button:nth-child(2) {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .orders-container button:nth-child(2):hover {
+    background-color: #e53935;
+  }
+  

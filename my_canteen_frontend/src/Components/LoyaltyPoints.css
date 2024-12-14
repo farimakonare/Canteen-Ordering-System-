@@ -1,0 +1,51 @@
+.loyalty-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loyalty-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .loyalty-container p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .update-rules {
+    margin-top: 20px;
+  }
+  
+  .update-rules h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .update-rules input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .update-rules button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .update-rules button:hover {
+    background-color: #45a049;
+  }
+  

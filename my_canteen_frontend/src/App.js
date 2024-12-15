@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Pages/Home';
 import Register from './Components/Pages/Register';
 import Login from './Components/Pages/Login';
@@ -11,7 +11,7 @@ import AdminMenu from './Components/AdminMenu';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/farimakonare.github.io/Canteen-Ordering-System-'>
       <Routes>
         {/*shares routes*/}
         <Route path="/" element={<Home />} />

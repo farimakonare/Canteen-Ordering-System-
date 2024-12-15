@@ -10,7 +10,7 @@ The Canteen Ordering System is a responsive web platform designed to streamline 
 
 Deployment Link:
 The project is deployed and accessible via this link:
-
+https://farimakonare.github.io/Canteen-Ordering-System-
 
 
 Login Details:

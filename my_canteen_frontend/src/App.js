@@ -11,7 +11,7 @@ import AdminMenu from './Components/AdminMenu';
 
 function App() {
   return (
-    <Router basename='/farimakonare.github.io/Canteen-Ordering-System-'>
+    <Router basename="/Canteen-Ordering-System-">
       <Routes>
         {/*shares routes*/}
         <Route path="/" element={<Home />} />

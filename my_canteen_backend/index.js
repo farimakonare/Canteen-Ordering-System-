@@ -54,7 +54,7 @@ const isAuthenticated = async (req, res, next) => {
 };
 
 // Register
-app.post('/Canteen-Ordering-System-/register', async (req, res) => {
+app.post('/register', async (req, res) => {
     const { name, email, password, dietary_preferences, allergies } = req.body;
 
     try {
@@ -80,7 +80,7 @@ app.post('/Canteen-Ordering-System-/register', async (req, res) => {
 
 
 // Login
-app.post('/Canteen-Ordering-System-/login', async (req, res) => {
+app.post('/login', async (req, res) => {
     const { email, password } = req.body;
        try {
         console.log("Login request:", req.body);

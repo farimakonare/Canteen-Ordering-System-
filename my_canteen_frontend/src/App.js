@@ -15,19 +15,19 @@ function App() {
       <Routes>
         {/*shares routes*/}
         <Route path="/" element={<Home />} />
-        <Route path="/Canteen_Ordering_System-/login" element={<Login />} />
-        <Route path="/Canteen_Ordering_System-/register" element={<Register />} />
-        <Route path="/Canteen_Ordering_System-/menu" element={<Menu />} />
-        <Route path="/Canteen_Ordering_System-/cart" element={<Cart />} />
-        <Route path="/Canteen_Ordering_System-/loyalty-points" element={<LoyaltyPoints />} />
+        <Route path="/Canteen-Ordering-System-/login" element={<Login />} />
+        <Route path="/Canteen-Ordering-System-/register" element={<Register />} />
+        <Route path="/Canteen-Ordering-System-/menu" element={<Menu />} />
+        <Route path="/Canteen-Ordering-System-/cart" element={<Cart />} />
+        <Route path="/Canteen-Ordering-System-/loyalty-points" element={<LoyaltyPoints />} />
 
         {/* Customer-Specific Routes */}
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/customer-dashboard" element={<Dashboard />} />
+        <Route path="/Canteen-Ordering-System-/orders" element={<Orders />} />
+        <Route path="/Canteen-Ordering-System-/customer-dashboard" element={<Dashboard />} />
          
         {/* Customer-Specific Routes */}        
-        <Route path="/admin-dashboard" element={<Dashboard />} /> 
-        <Route path="/admin-menu" element={<AdminMenu />} />
+        <Route path="/Canteen-Ordering-System-/admin-dashboard" element={<Dashboard />} /> 
+        <Route path="/Canteen-Ordering-System-/admin-menu" element={<AdminMenu />} />
       </Routes>
     </Router>
   );

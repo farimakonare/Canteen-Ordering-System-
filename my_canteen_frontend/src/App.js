@@ -15,8 +15,8 @@ function App() {
       <Routes>
         {/*shares routes*/}
         <Route path="/" element={<Home />} />
-        <Route path="/Canteen-Ordering-System-/login" element={<Login />} />
-        <Route path="/Canteen-Ordering-System-/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/loyalty-points" element={<LoyaltyPoints />} />

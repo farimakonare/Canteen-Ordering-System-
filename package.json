@@ -23,8 +23,5 @@
     "pg": "^8.13.1",
     "react-router-dom": "^7.0.2",
     "react-scripts": "^5.0.1"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.2.0"
   }
 }

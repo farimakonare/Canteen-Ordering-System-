@@ -15,11 +15,11 @@ function App() {
       <Routes>
         {/*shares routes*/}
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/loyalty-points" element={<LoyaltyPoints />} />
+        <Route path="/Canteen-Ordering-System-/login" element={<Login />} />
+        <Route path="/Canteen-Ordering-System-/register" element={<Register />} />
+        <Route path="/Canteen-Ordering-System-/menu" element={<Menu />} />
+        <Route path="/Canteen-Ordering-System-/cart" element={<Cart />} />
+        <Route path="/Canteen-Ordering-System-/loyalty-points" element={<LoyaltyPoints />} />
 
         {/* Customer-Specific Routes */}
         <Route path="/orders" element={<Orders />} />

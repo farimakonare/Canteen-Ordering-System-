@@ -23,10 +23,10 @@ const handleLogin = async (e) => {
           // Redirect based on role
           if (response.data.user.role === "admin") {
             setMessage('Admin registered successfully!');
-            setTimeout(() => (window.location.href = '/admin-dashboard'), 2000);
+            setTimeout(() => (window.location.href = '/Canteen-Ordering-System-/admin-dashboard'), 2000);
           } else if (response.data.user.role === "customer") {
             setMessage('Customer registered successfully!');
-            setTimeout(() => (window.location.href = '/customer-dashboard'), 2000);
+            setTimeout(() => (window.location.href = '/Canteen-Ordering-System-/customer-dashboard'), 2000);
           } else {
               throw new Error("Unknown role detected.");
           }

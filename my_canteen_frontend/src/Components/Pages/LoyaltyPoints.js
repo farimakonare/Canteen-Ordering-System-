@@ -5,6 +5,7 @@ const LoyaltyPoints = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const [loyaltyPoints, setLoyaltyPoints] = useState(parseInt(localStorage.getItem("loyalty_points")) || 0); 
 
+
   const getDiscount = () => {
     if (loyaltyPoints >= 50 && loyaltyPoints <= 70) {
       return "You get a 25% discount!";
@@ -26,7 +27,7 @@ const LoyaltyPoints = () => {
   }, [loyaltyPoints, user]);
 
   const navigateToMenu = () => {
-    window.location.href = "/menu";
+    window.location.href = "/Canteen-Ordering-System-/menu";
   };
 
   return (

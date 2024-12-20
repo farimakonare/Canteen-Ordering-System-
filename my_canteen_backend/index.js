@@ -54,12 +54,13 @@ const isAuthenticated = async (req, res, next) => {
 };
 
 // Register
-app.post('/register', async (req, res) => {
+app.post('/Postregister', async (req, res) => {
     const { name, email, password, dietary_preferences, allergies } = req.body;
 
     try {
         const userCheck = await pool.query('SELECT * FROM public.users WHERE email = $1', [email]);
         if (userCheck.rows.length > 0) {
+            console.log("User already exists");
             return res.status(400).json({ error: 'User already exists' });
         }
 

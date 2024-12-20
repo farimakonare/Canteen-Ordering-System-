@@ -20,11 +20,11 @@ const Home = () => {
             </div>
             <nav className="home-nav">
                 <div className='register'>
-                    <a href="/register" className="home-link">Register</a>
+                    <a href="/Canteen-Ordering-System-/register" className="home-link">Register</a>
                 </div>
             
                 <div className='login'>  
-                    <a href="/login" className="home-link">Login</a>
+                    <a href="/Canteen-Ordering-System-/login" className="home-link">Login</a>
                 </div>
             </nav>
         </div>

@@ -98,9 +98,8 @@ const Menu = () => {
       ))}
       <div className="cart-indicator">
         <p>Items in Cart: {cartCount}</p>
-        <button className="view-cart" onClick={() => (window.location.href = "/cart")}>View Cart</button>
+        <button className="view-cart" onClick={() => (window.location.href = "/Canteen-Ordering-System-/cart")}>View Cart</button>
       </div>
-      <div className='go_back'><button onClick={() => navigate('/customer-dashboard')}>Go Back to Dashboard</button></div> 
     </div>
     
   ); 

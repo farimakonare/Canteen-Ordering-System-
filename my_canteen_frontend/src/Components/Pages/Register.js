@@ -16,7 +16,7 @@ const [message, setMessage] = useState('');
         setMessage('');
 
         try {
-            const response = await axios.post('http://localhost:3035/register', {
+            const response = await axios.post('http://localhost:3035/Postregister', {
                 name,
                 email,
                 password,
@@ -26,12 +26,18 @@ const [message, setMessage] = useState('');
             
             localStorage.setItem("user", JSON.stringify(response.data.user));
 
+            console.log(response.data.user.role);
+            console.log("avant la condition");
+            
             if (response.data.user.role === 'admin') {
+                console.log("je suis dans la condition");
                 setMessage('Admin registered successfully!');
-                setTimeout(() => (window.location.href = '/admin-dashboard'), 2000);
+                setTimeout(() => (window.location.href = '/Canteen-Ordering-System-/admin-dashboard'), 2000);
+
             } else {
+                console.log("je suis dans le else");
                 setMessage('Customer registered successfully!');
-                setTimeout(() => (window.location.href = '/customer-dashboard'), 2000);
+                setTimeout(() => (window.location.href = '/Canteen-Ordering-System-/customer-dashboard'), 2000);
             }
         } catch (err) {
             const errorMessage = err.response?.data?.error || 'Registration failed. Please try again.';

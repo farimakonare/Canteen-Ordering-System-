@@ -7,7 +7,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://farimakonare.github.io/Canteen-Ordering-System-/'], // Add your frontend's production URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
+    credentials: true, // Allow cookies or other credentials if necessary
+  }));
+  
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -60,7 +65,7 @@ app.post('/Postregister', async (req, res) => {
     try {
         const userCheck = await pool.query('SELECT * FROM public.users WHERE email = $1', [email]);
         if (userCheck.rows.length > 0) {
-            console.log("User already exists");
+            
             return res.status(400).json({ error: 'User already exists' });
         }
 

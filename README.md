@@ -109,6 +109,7 @@ Postman Test Screenshots
 Include screenshots of successful Postman tests for the following endpoints:
 
 Registration
+![Pasted Graphic](https://github.com/user-attachments/assets/c53c2773-0e48-4646-a329-5c4b653a3c72)
 Login
 Fetching menu
 Adding items to the cart

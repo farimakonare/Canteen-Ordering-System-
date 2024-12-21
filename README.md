@@ -111,11 +111,33 @@ Include screenshots of successful Postman tests for the following endpoints:
 Registration
 ![Pasted Graphic](https://github.com/user-attachments/assets/c53c2773-0e48-4646-a329-5c4b653a3c72)
 Login
+![Pasted Graphic 1](https://github.com/user-attachments/assets/96380a4a-f865-44f3-a90c-e65c9facfe50)
+Logout
+![Pasted Graphic 2](https://github.com/user-attachments/assets/91de3e4f-abd6-4318-ac87-98433f252100)
 Fetching menu
+![Pasted Graphic 3](https://github.com/user-attachments/assets/46fd29a3-cf4c-497c-9562-1afff41496f2)
+Add item to menu before checkAdmin
+![Pasted Graphic 4](https://github.com/user-attachments/assets/0b076ce7-8291-4083-a42b-54e0a848b086)
+Fetch Orders by user id
+![Pasted Graphic 5](https://github.com/user-attachments/assets/dc337b16-7d51-4b2f-af56-8f52027fe7e8)
+Track Orders by user id
+![Pasted Graphic 6](https://github.com/user-attachments/assets/076348fe-453c-4d6d-a732-9bfee25e3083)
+Admin confirm/cancel order
+![Pasted Graphic 7](https://github.com/user-attachments/assets/a88ab0ea-3a07-4728-aa5d-4c2b3659ec96)
 Adding items to the cart
+![Pasted Graphic 8](https://github.com/user-attachments/assets/e69b5fdf-5440-466b-9730-de1c7250cf95)
+Fetching cart items of a user using user id
+![Pasted Graphic 9](https://github.com/user-attachments/assets/2ebf540c-235e-44cc-84a4-cc4d6475cfd8)
+Update cart item qty or customisation
+![Pasted Graphic 10](https://github.com/user-attachments/assets/2c05d9cf-deed-42aa-abd7-2d4987942742)
+Delete cart item
+![Pasted Graphic 11](https://github.com/user-attachments/assets/81132cc7-ce03-437f-ac7a-9dc85e2c5bb0)
 Placing an order
+![Pasted Graphic 12](https://github.com/user-attachments/assets/c823e000-e5c2-43bf-b376-f3b2c4f66c56)
 Tracking order status
-
+![Pasted Graphic 13](https://github.com/user-attachments/assets/db9cefaa-8ee9-40b4-b770-e52c6b23f297)
+Fetching loyalty points
+![Pasted Graphic 14](https://github.com/user-attachments/assets/52a21481-b79e-4280-905c-edc9252fedef)
 
 Deployment Requirements:
 The project is fully deployed and accessible via the provided link.

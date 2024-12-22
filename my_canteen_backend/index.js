@@ -8,9 +8,9 @@ const cors = require('cors');
 
 
 app.use(cors({
-    origin: ['https://farimakonare.github.io'],  // Allow your frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],    // Allow necessary methods
-    credentials: true                             // Allow credentials if needed
+    origin: ['https://farimakonare.github.io/Canteen-Ordering-System-'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],    
+    credentials: true                             
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

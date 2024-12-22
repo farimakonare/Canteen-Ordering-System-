@@ -15,7 +15,7 @@ const handleLogin = async (e) => {
       setMessage("");
   
       try {
-          const response = await api.post("http://localhost:3035/login", { email, password });
+        const response = await api.post("/login", { email, password });
   
           // Store user data in localStorage
           localStorage.setItem("user", JSON.stringify(response.data.user));

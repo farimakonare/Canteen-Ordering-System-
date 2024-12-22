@@ -9,9 +9,12 @@ const cors = require('cors');
 
 app.use(cors({
     origin: ['https://farimakonare.github.io'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],    
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],   
+    allowedHeaders: ['Content-Type', 'Authorization'], 
     credentials: true                             
 }));
+app.options('*', cors());
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

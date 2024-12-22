@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./../Login.css";
-import api from './../Services/api';
 
 const Login = () => {
 const [email, setEmail] = useState("");
@@ -15,7 +14,7 @@ const handleLogin = async (e) => {
       setMessage("");
   
       try {
-          const response = await api.post("http://localhost:3035/login", { email, password });
+          const response = await axios.post("http://localhost:3035/login", { email, password });
   
           // Store user data in localStorage
           localStorage.setItem("user", JSON.stringify(response.data.user));

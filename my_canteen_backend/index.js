@@ -7,12 +7,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 
-app.use(cors({
-    origin: ['https://farimakonare.github.io/Canteen-Ordering-System-/'], // Add your frontend's production URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
-    credentials: true, // Allow cookies or other credentials if necessary
-  }));
-  
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

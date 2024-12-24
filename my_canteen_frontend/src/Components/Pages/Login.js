@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./../Login.css";
-import api from './Services/api';  // Update the path based on your file structure
 
 
 const Login = () => {
@@ -16,7 +15,7 @@ const handleLogin = async (e) => {
       setMessage("");
   
       try {
-          const response = await api.post("https://canteen-backend.onrender.com/login", { email, password });
+          const response = await axios.post("https://canteen-backend.onrender.com/login", { email, password });
   
           // Store user data in localStorage
           localStorage.setItem("user", JSON.stringify(response.data.user));

@@ -15,9 +15,13 @@ https://farimakonare.github.io/Canteen-Ordering-System-
 
 Login Details:
 For testing authentication, use the following login credentials:
-
+For customer:
 Username: testuser@example.com
 Password: password123
+
+For admin:
+Username: admin@gmail.com
+Password: passAdminpass1234@allons
 
 Feature Checklist
 Below is a checklist of the required features implemented in the project:

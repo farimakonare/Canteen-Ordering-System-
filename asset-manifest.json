@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Canteen-Ordering-System-/static/css/main.cbc86541.css",
-    "main.js": "/Canteen-Ordering-System-/static/js/main.75eae2f0.js",
+    "main.js": "/Canteen-Ordering-System-/static/js/main.6bdacfcb.js",
     "static/media/drink1.jpg": "/Canteen-Ordering-System-/static/media/drink1.8e0b7870dae405d58257.jpg",
     "static/media/food.jpeg": "/Canteen-Ordering-System-/static/media/food.62708cb323d34dac22cb.jpeg",
     "static/media/drink.jpeg": "/Canteen-Ordering-System-/static/media/drink.548c0285692b3f153ef9.jpeg",
     "static/media/burger.jpeg": "/Canteen-Ordering-System-/static/media/burger.8bf828a639cc0d030fdf.jpeg",
     "index.html": "/Canteen-Ordering-System-/index.html",
     "main.cbc86541.css.map": "/Canteen-Ordering-System-/static/css/main.cbc86541.css.map",
-    "main.75eae2f0.js.map": "/Canteen-Ordering-System-/static/js/main.75eae2f0.js.map"
+    "main.6bdacfcb.js.map": "/Canteen-Ordering-System-/static/js/main.6bdacfcb.js.map"
   },
   "entrypoints": [
     "static/css/main.cbc86541.css",
-    "static/js/main.75eae2f0.js"
+    "static/js/main.6bdacfcb.js"
   ]
 }

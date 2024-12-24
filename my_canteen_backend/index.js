@@ -8,9 +8,15 @@ const cors = require('cors');
 
 
 
+// app.use(cors({
+//     origin: ['https://farimakonare.github.io'],
+//     credentials: true                             
+// }));
 app.use(cors({
-    origin: ['https://farimakonare.github.io'],
-    credentials: true                             
+    origin: 'https://farimakonare.github.io',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(bodyParser.json());

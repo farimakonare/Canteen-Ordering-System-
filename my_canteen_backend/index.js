@@ -16,7 +16,7 @@ app.use(cors({
     origin: 'https://farimakonare.github.io',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'X-Requested-With']
 }));
 
 app.use(bodyParser.json());
@@ -63,6 +63,11 @@ const isAuthenticated = async (req, res, next) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 };
+
+// Add this near the top of your routes, after your middleware configurations
+app.get('/', (req, res) => {
+    res.send('Canteen Ordering System API is running');
+});
 
 // Register
 app.post('/Postregister', async (req, res) => {

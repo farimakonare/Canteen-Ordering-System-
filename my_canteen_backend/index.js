@@ -7,17 +7,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 
-
-// app.use(cors({
-//     origin: ['https://farimakonare.github.io'],
-//     credentials: true                             
-// }));
-app.use(cors({
-    origin: 'https://farimakonare.github.io',
-    credentials: true
-}));
-
-
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

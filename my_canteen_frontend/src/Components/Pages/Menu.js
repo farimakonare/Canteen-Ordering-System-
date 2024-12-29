@@ -22,7 +22,7 @@ const Menu = () => {
     }
     setAddingItemId(menuItemId)
     try {
-      await axios.post("http://localhost:3035/cart", {
+      await axios.post("https://canteen-backend.onrender.com/cart", {
         user_id: user.user_id,
         menu_item_id: menuItemId,
         quantity: 1,

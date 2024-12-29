@@ -118,7 +118,7 @@ const Cart = () => {
             customization: item.customization.note || ""
         }));
 
-        const response = await axios.post('http://localhost:3035/orders', {
+        const response = await axios.post('https://canteen-backend.onrender.com/orders', {
             user_id: user.user_id,
             menu_items: orderItems,
             total_price: totalPrice

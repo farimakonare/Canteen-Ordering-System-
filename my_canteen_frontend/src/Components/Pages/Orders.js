@@ -21,9 +21,9 @@ const Orders = () => {
   
     const fetchOrders = async () => {
       try {
-        let endpoint = `http://localhost:3035/orders/${user.user_id}`;
+        let endpoint = `https://canteen-backend.onrender.com/orders/${user.user_id}`;
         if (user.role === 'admin') {
-          endpoint = `http://localhost:3035/admin/orders/status/${statusFilter || "pending"}`;
+          endpoint = `https://canteen-backend.onrender.com/admin/orders/status/${statusFilter || "pending"}`;
         }
   
         const response = await axios.get(endpoint);
@@ -53,7 +53,7 @@ const Orders = () => {
     }
     setLoadingState((prev) => ({ ...prev, [orderId]: true }));
     try {
-      const response = await axios.put(`http://localhost:3035/admin/orders/${orderId}`, { status: newStatus });
+      const response = await axios.put(`https://canteen-backend.onrender.com/admin/orders/${orderId}`, { status: newStatus });
       setOrders(orders.map((order) => (order.order_id === orderId ? response.data.order : order)));
       alert("Order status updated successfully!");
     } catch (error) {
@@ -67,7 +67,7 @@ const Orders = () => {
 
   const handleDeleteOrder = async (orderId) => {
     try {
-      await axios.delete(`http://localhost:3035/orders/${orderId}`);
+      await axios.delete(`https://canteen-backend.onrender.com/orders/${orderId}`);
       setOrders(orders.filter((order) => order.order_id !== orderId));
       alert("Order deleted successfully!");
     } catch (error) {

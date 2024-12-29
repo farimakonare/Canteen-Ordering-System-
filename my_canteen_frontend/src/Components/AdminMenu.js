@@ -16,7 +16,7 @@ const AdminMenu = () => {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const response = await axios.get("http://localhost:3035/menu");
+        const response = await axios.get("https://canteen-backend.onrender.com/menu");
         setMenuItems(response.data);
       } catch (error) {
         console.error("Error fetching menu items:", error);
@@ -28,7 +28,7 @@ const AdminMenu = () => {
   const handleAddMenuItem = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3035/menu", formData);
+      const response = await axios.post("https://canteen-backend.onrender.com/menu", formData);
       setMenuItems([...menuItems, response.data.menuItem]);
       alert("Menu item added successfully!");
     } catch (error) {
@@ -38,7 +38,7 @@ const AdminMenu = () => {
 
   const handleDelete = async (menuId) => {
     try {
-      await axios.delete(`http://localhost:3035/admin/menu/${menuId}`);
+      await axios.delete(`https://canteen-backend.onrender.com/admin/menu/${menuId}`);
       setMenuItems(menuItems.filter((item) => item.menu_id !== menuId));
       alert("Menu item deleted successfully!");
     } catch (error) {
@@ -48,7 +48,7 @@ const AdminMenu = () => {
 
   const handleUpdate = async (menuId, updates) => {
     try {
-      const response = await axios.put(`http://localhost:3035/menu/${menuId}`, updates);
+      const response = await axios.put(`https://canteen-backend.onrender.com/menu/${menuId}`, updates);
       setMenuItems(menuItems.map((item) => (item.menu_id === menuId ? response.data.menuItem : item)));
       alert("Menu item updated successfully!");
     } catch (error) {

@@ -8,11 +8,13 @@ const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [error, setError] = useState("");
 const [message, setMessage] = useState(""); 
+const [loading, setLoading] = useState(false);
 
 const handleLogin = async (e) => {
       e.preventDefault();
       setError("");
       setMessage("");
+      setLoading(true);
   
       try {
           const response = await axios.post("https://canteen-backend.onrender.com/login", { email, password });
@@ -24,16 +26,23 @@ const handleLogin = async (e) => {
           // Redirect based on role
           if (response.data.user.role === "admin") {
             setMessage('Admin registered successfully!');
-            setTimeout(() => (window.location.href = '/Canteen-Ordering-System-/admin-dashboard'), 2000);
+            setTimeout(() => {
+                setLoading(false); 
+                window.location.href = '/Canteen-Ordering-System-/admin-dashboard';
+            }, 2000);
           } else if (response.data.user.role === "customer") {
             setMessage('Customer registered successfully!');
-            setTimeout(() => (window.location.href = '/Canteen-Ordering-System-/customer-dashboard'), 2000);
+            setTimeout(() => {
+                setLoading(false); 
+                window.location.href = '/Canteen-Ordering-System-/customer-dashboard';
+            }, 2000);
           } else {
               throw new Error("Unknown role detected.");
           }
       } catch (err) {
-          setError(err.response?.data?.error || "Login failed. Please try again.");
-      }
+        setError(err.response?.data?.error || "Login failed. Please try again.");
+        setLoading(false); 
+    }
   };
 
     return (
@@ -46,6 +55,7 @@ const handleLogin = async (e) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    disabled={loading}
                 />
                 <input
                     type="password"
@@ -53,8 +63,11 @@ const handleLogin = async (e) => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
+                    disabled={loading}
                 />
-                <button type="submit">Login</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? "Logging in..." : "Login"} {/* Conditional rendering for button text */}
+                </button>
                 {error && <p className="error-message">{error}</p>} {/* Display error */}
                 {message && <p className="success-message">{message}</p>} {/* Display success */}
             </form>

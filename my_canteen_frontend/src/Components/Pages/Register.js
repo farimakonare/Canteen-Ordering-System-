@@ -9,14 +9,16 @@ const [dietaryPreferences, setDietaryPreferences] = useState('');
 const [allergies, setAllergies] = useState('');
 const [error, setError] = useState(''); 
 const [message, setMessage] = useState(''); 
+const [loading, setLoading] = useState(false);
     
     const handleRegister = async (e) => {
         e.preventDefault();
         setError('');
         setMessage('');
+        setLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:3035/Postregister', {
+            const response = await axios.post('https://canteen-backend.onrender.com/Postregister', {
                 name,
                 email,
                 password,
@@ -32,16 +34,23 @@ const [message, setMessage] = useState('');
             if (response.data.user.role === 'admin') {
                 console.log("je suis dans la condition");
                 setMessage('Admin registered successfully!');
-                setTimeout(() => (window.location.href = '/Canteen-Ordering-System-/admin-dashboard'), 2000);
+                setTimeout(() => {
+                    setLoading(false);
+                    window.location.href = '/Canteen-Ordering-System-/admin-dashboard'
+                }, 2000);
 
             } else {
                 console.log("je suis dans le else");
                 setMessage('Customer registered successfully!');
-                setTimeout(() => (window.location.href = '/Canteen-Ordering-System-/customer-dashboard'), 2000);
+                setTimeout(() => {
+                    setLoading(false); 
+                    window.location.href = '/Canteen-Ordering-System-/customer-dashboard';
+                }, 2000);
             }
         } catch (err) {
             const errorMessage = err.response?.data?.error || 'Registration failed. Please try again.';
             setError(errorMessage);
+            setLoading(false);
         }
     };
 
@@ -82,7 +91,9 @@ const [message, setMessage] = useState('');
                     value={allergies}
                     onChange={(e) => setAllergies(e.target.value)}
                 />
-                <button type="submit">Register</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? "Registering ..." : "Register"} {/* Conditional rendering for button text */}
+                </button>
                 {error && <p className="error-message">{error}</p>}
                 {message && <p className="success-message">{message}</p>}
             </form>

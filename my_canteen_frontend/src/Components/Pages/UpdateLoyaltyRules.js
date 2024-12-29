@@ -9,7 +9,7 @@ const AddLoyaltyPoints = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3035/admin/loyalty/add", {
+            const response = await axios.post("https://canteen-backend.onrender.com/admin/loyalty/add", {
                 user_id: userId,
                 points: parseInt(points),
             });
